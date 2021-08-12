@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'SFProDisplay';
+    src: url('fonts/SFProDisplay-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
