@@ -113,6 +113,9 @@ main {
 section {
   margin-bottom: 4rem;
 }
+section h3 {
+  padding: 1rem 0;
+}
 section .team__roster {
   text-align: center;
   padding: 5rem 5rem;
