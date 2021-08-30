@@ -44,6 +44,13 @@ header {
     flex-direction: column;
     text-align: center;
   }
+  .flexNavH__burger {
+    display: block;
+    a {
+      color: crimson;
+      text-decoration: crimson;
+    }
+  }
   nav {
     top: 0;
     left: 0;
@@ -64,9 +71,15 @@ header {
 
     }
 
-    .nav__links ul {
-      text-align: center;
+    .nav__links {
 
+      #myLinks {
+        display: none;
+      }
+
+      ul {
+        text-align: center;
+      }
       a:hover {
         font-weight: bold;
         cursor: pointer;
@@ -277,17 +290,34 @@ th {
 
   @media only screen and (min-width: 920px) {
 
+    header {
+      nav {
 
 
-    .flexNavP {
-      flex-direction: row;
-      justify-content: space-between;
-      text-align: left;
+        .flexNavP {
+          flex-direction: row;
+          justify-content: space-between;
+          text-align: left;
 
-    }
+        }
 
-    .nav__links ul {
-      text-align: right;
+        .flexNavH__burger {
+          display: none;
+        }
+
+
+
+        .nav__links  {
+          #myLinks {
+            display: block;
+          }
+          ul {
+            text-align: right;
+          }
+        }
+
+      }
+
     }
 
     .team__roster {

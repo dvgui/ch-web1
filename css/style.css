@@ -37,6 +37,13 @@ header .flexNavP {
   flex-direction: column;
   text-align: center;
 }
+header .flexNavH__burger {
+  display: block;
+}
+header .flexNavH__burger a {
+  color: crimson;
+  text-decoration: crimson;
+}
 header nav {
   top: 0;
   left: 0;
@@ -53,10 +60,13 @@ header nav .nav__brand {
   letter-spacing: 0.2rem;
   font-style: italic;
 }
+header nav .nav__links #myLinks {
+  display: none;
+}
 header nav .nav__links ul {
   text-align: center;
 }
-header nav .nav__links ul a:hover {
+header nav .nav__links a:hover {
   font-weight: bold;
   cursor: pointer;
 }
@@ -219,13 +229,18 @@ th {
 
 /* Media Queries for Responsive Layout */
 @media only screen and (min-width: 920px) {
-  .flexNavP {
+  header nav .flexNavP {
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
   }
-
-  .nav__links ul {
+  header nav .flexNavH__burger {
+    display: none;
+  }
+  header nav .nav__links #myLinks {
+    display: block;
+  }
+  header nav .nav__links ul {
     text-align: right;
   }
 
