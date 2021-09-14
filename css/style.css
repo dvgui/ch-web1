@@ -32,26 +32,32 @@ header {
   font-size: 3rem;
   background: #0F111F;
 }
+
 header .flexNavP {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
+
 header .flexNavH__burger {
   display: block;
 }
+
 header .flexNavH__burger a {
   color: crimson;
   text-decoration: crimson;
 }
+
 header nav {
   top: 0;
   left: 0;
 }
+
 header nav .legend {
   font-size: 1.5rem;
   color: darkgray;
 }
+
 header nav .nav__brand {
   font-family: "GeneralSans-Regular", sans-serif;
   color: crimson;
@@ -60,16 +66,20 @@ header nav .nav__brand {
   letter-spacing: 0.2rem;
   font-style: italic;
 }
+
 header nav .nav__links #myLinks {
   display: none;
 }
+
 header nav .nav__links ul {
   text-align: center;
 }
+
 header nav .nav__links a:hover {
   font-weight: bold;
   cursor: pointer;
 }
+
 header nav li {
   font-size: 1.8rem;
   display: inline-block;
@@ -79,8 +89,212 @@ header nav li {
   text-transform: uppercase;
   letter-spacing: 0.07rem;
 }
+
 header nav li a {
   color: #CBD1D6;
+}
+
+/*
+*
+****  Carousel  ****
+*
+*/
+* {
+  box-sizing: border-box;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Make the images invisible by default */
+.Containers {
+  display: none;
+}
+
+/* forward & Back buttons */
+.Back, .forward {
+  cursor: pointer;
+  position: absolute;
+  top: 48%;
+  width: auto;
+  margin-top: -23px;
+  padding: 17px;
+  color: grey;
+  font-weight: bold;
+  font-size: 19px;
+  transition: 0.4s ease;
+  border-radius: 0 5px 5px 0;
+  user-select: none;
+}
+
+/* Place the "forward button" to the right */
+.forward {
+  right: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+/*when the user hovers,add a black background with some little opacity */
+.Back:hover, .forward:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption Info */
+.Info {
+  color: #e3e3e3;
+  font-size: 16px;
+  padding: 10px 14px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Worknumbering (1/3 etc) */
+.MessageInfo {
+  color: #f2f2f3;
+  font-size: 14px;
+  padding: 10px 14px;
+  position: absolute;
+  top: 0;
+}
+
+/* The circles or bullets and indicators */
+.dots {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin: 0 3px;
+  background-color: #acc;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+.enable, .dots:hover {
+  background-color: #717161;
+}
+
+/* Faint animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.4s;
+  animation-name: fade;
+  animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 2;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 2;
+  }
+}
+/* FORMS */
+.form-style-1 {
+  margin: 10px auto;
+  max-width: 400px;
+  padding: 0 0.5rem 2rem 2rem;
+  font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.form-style-1 li {
+  padding: 0;
+  display: block;
+  list-style: none;
+  margin: 10px 0 0 0;
+}
+
+.form-style-1 label {
+  margin: 0 0 3px 0;
+  padding: 0px;
+  display: block;
+  font-weight: bold;
+}
+
+.form-style-1 input[type=text],
+.form-style-1 input[type=date],
+.form-style-1 input[type=datetime],
+.form-style-1 input[type=number],
+.form-style-1 input[type=search],
+.form-style-1 input[type=time],
+.form-style-1 input[type=url],
+.form-style-1 input[type=email],
+textarea,
+select {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: 1px solid #BEBEBE;
+  padding: 7px;
+  margin: 0px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+.form-style-1 input[type=text]:focus,
+.form-style-1 input[type=date]:focus,
+.form-style-1 input[type=datetime]:focus,
+.form-style-1 input[type=number]:focus,
+.form-style-1 input[type=search]:focus,
+.form-style-1 input[type=time]:focus,
+.form-style-1 input[type=url]:focus,
+.form-style-1 input[type=email]:focus,
+.form-style-1 textarea:focus,
+.form-style-1 select:focus {
+  -moz-box-shadow: 0 0 8px #88D5E9;
+  -webkit-box-shadow: 0 0 8px #88D5E9;
+  box-shadow: 0 0 8px #88D5E9;
+  border: 1px solid #88D5E9;
+}
+
+.form-style-1 .field-divided {
+  width: 49%;
+}
+
+.form-style-1 .field-long {
+  width: 100%;
+}
+
+.form-style-1 .field-select {
+  width: 100%;
+}
+
+.form-style-1 .field-textarea {
+  height: 100px;
+}
+
+.form-style-1 input[type=submit], .form-style-1 input[type=button] {
+  background: #4B99AD;
+  padding: 8px 15px 8px 15px;
+  border: none;
+  color: #fff;
+}
+
+.form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover {
+  background: #4691A4;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.form-style-1 .required {
+  color: red;
 }
 
 /* Footer */
@@ -95,20 +309,24 @@ footer {
   justify-content: space-between;
   /* cuando la pantalla es muy alta queda el piso en color blanco */
 }
+
 footer a {
   color: crimson;
 }
+
 footer .foot__brand {
   max-width: 30%;
   display: inline;
   color: white;
 }
+
 footer .links {
   display: inline;
   text-align: right;
   font-size: 1.5rem;
   padding: 0 0;
 }
+
 footer .links li {
   display: inline-block;
   margin-left: 0.5rem;
@@ -123,26 +341,32 @@ main {
 section {
   margin-bottom: 4rem;
 }
+
 section h3 {
   padding: 1rem 0;
 }
+
 section .team__roster {
   text-align: center;
   padding: 5rem 5rem;
 }
+
 section .team__roster .member__name {
   padding-bottom: 0.75rem;
 }
+
 section .team__roster .member__role {
   padding-top: 0.5rem;
   padding-bottom: 3rem;
   font-weight: bold;
 }
+
 section .sectImg {
   grid-area: image;
   margin: auto;
   width: 50%;
 }
+
 section .title {
   color: red;
   text-shadow: 0.4rem 0.4rem 0.2rem #0F111F;
@@ -156,33 +380,41 @@ section .title {
   padding-bottom: 4rem;
   text-align: center;
 }
+
 section .content {
   margin: 0 0 0 5rem;
   line-height: 2.5rem;
   grid-area: content;
 }
+
 section .content form {
   padding-top: 2rem;
   text-align: center;
   line-height: 4rem;
 }
+
 section #creators {
   text-align: right;
 }
+
 section p span.highlight {
   font-style: italic;
 }
+
 section p a {
   color: olive;
 }
+
 section p ahover {
   font-weight: bold;
   cursor: pointer;
 }
+
 section ul {
   list-style-type: square;
   list-style-image: url("../img/checkmark-16.png");
 }
+
 section ol.c {
   list-style-type: upper-roman;
 }
@@ -192,6 +424,7 @@ section ol.c {
   transition-duration: 1.2s;
   transition-property: transform;
 }
+
 .ima:hover {
   transform: rotate(360deg);
   -webkit-transform: rotate(360deg);
@@ -234,12 +467,15 @@ th {
     justify-content: space-between;
     text-align: left;
   }
+
   header nav .flexNavH__burger {
     display: none;
   }
+
   header nav .nav__links #myLinks {
     display: block;
   }
+
   header nav .nav__links ul {
     text-align: right;
   }
@@ -251,6 +487,7 @@ th {
     text-align: center;
     justify-content: space-between;
   }
+
   .team__roster .member {
     flex: 1 0 21%;
     padding: 0.7rem 0.5rem;
@@ -265,6 +502,7 @@ th {
   header {
     padding: 1.5rem 10% 1rem 15%;
   }
+
   header .flexNavP {
     flex-direction: row;
     justify-content: space-between;
@@ -274,6 +512,7 @@ th {
   footer {
     padding: 1.5rem 10% 1rem 15%;
   }
+
   footer .nav__links ul {
     text-align: right;
   }
@@ -326,5 +565,6 @@ th {
     padding: 4rem 15%;
   }
 }
+/*# sourceMappingURL=style.scss.map */
 
 /*# sourceMappingURL=style.css.map */

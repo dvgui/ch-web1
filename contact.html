@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" type="text/css" href="css/general-sans.css"/>
     <link rel="stylesheet" type="text/css" href="css/sfprodisplay.css"/>
+
 </head>
 <body>
 <header>
@@ -40,33 +41,29 @@
     <section class="section__center">
         <div class="title">        <h1>Contact Us!</h1>        </div>
             <div class="content">
-                <form enctype="application/x-www-form-urlencoded" method="post" action="contact.html">
-                    <div>
-                        <label for="area">
-                            Please select the area you want to reach out to
-                        </label>
-                            <select id ="area" name="area">
-                                <option value="Area" disabled>Area</option>
-                                <option value="marketing">Marketing</option>
-                                <option value="support">Support</option>
-                                <option value="other">Other</option>
+                <form>
+                    <ul class="form-style-1">
+                        <li><label>Full Name <span class="required">*</span></label><input type="text" name="field1" class="field-divided" placeholder="First" /> <input type="text" name="field2" class="field-divided" placeholder="Last" /></li>
+                        <li>
+                            <label>Email <span class="required">*</span></label>
+                            <input type="email" name="field3" class="field-long" />
+                        </li>
+                        <li>
+                            <label>Subject</label>
+                            <select name="field4" class="field-select">
+                                <option value="Advertise">Advertise</option>
+                                <option value="Partnership">Partnership</option>
+                                <option value="General Question">General</option>
                             </select>
-
-                    </div>
-                    <div>
-                        <label for="email">Email Address</label>
-
-                        <input type="email" name="email" id="email" value="your@email.com">
-                    </div>
-                    <div class="terms">
-                        <label for="terms">Do you agree to our Terms and Conditions?</label>
-                    </div>
-                    <input type="checkbox" name="terms" class="terms" id="terms" value="1">
-
-                    <br>
-                    <input type="submit" name="Send Message">
-                    <input type="reset" name="Clean Form">
-
+                        </li>
+                        <li>
+                            <label>Your Message <span class="required">*</span></label>
+                            <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
+                        </li>
+                        <li>
+                            <input type="submit" value="Submit" />
+                        </li>
+                    </ul>
                 </form>
             </div>
     </section>
